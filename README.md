@@ -1,8 +1,17 @@
 # dotnetCore3.x-example
-this is for trying features in .net core 3.x
+this is for trying .net core 3.x
 
-in this project i tried the ViewComponents 
-IHttpClientFactory example 
+this project has examples for:
 
-this will include project for plazor 
+ViewComponents 
+bundleconfig
+IHttpClientFactory  
+mvc controller 
+Api controller 
+Razor views 
+Dependency injection 
+Attribute routing 
+Default mvc routing 
+
+this will include project for plazor in the future , this comment will be removed once this is done 
 
