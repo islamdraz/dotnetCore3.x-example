@@ -1,0 +1,52 @@
+﻿@model Shared.ConferenceModel 
+
+<form asp-action="Add" method="post">
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label asp-for="Name"></label>
+        </div>
+
+        <div class="col-md-2">
+       
+            <input  asp-for="Name" class="form-control"/>
+        </div>
+
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label asp-for="Location"></label>
+        </div>
+
+        <div class="col-md-2">
+       
+            <input  asp-for="Location" class="form-control"/>
+        </div>
+    </div>
+    
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label asp-for="Start"></label>
+        </div>
+
+        <div class="col-md-2">
+       
+            <input  asp-for="Start" class="form-control"/>
+        </div>
+    </div>
+    
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label asp-for="AttendeeTotal"></label>
+        </div>
+
+        <div class="col-md-2">
+       
+            <input  asp-for="AttendeeTotal" class="form-control"/>
+        </div>
+    </div>
+    
+    <div class="row form-group">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+
+</form>

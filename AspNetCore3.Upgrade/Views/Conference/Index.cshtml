@@ -1,0 +1,32 @@
+﻿@using Shared;
+@model IEnumerable<ConferenceModel>
+
+<div class="row">
+    <div class="col-md-2">
+        @await Component.InvokeAsync("Statistics",new { stateCaption = "Statistics"})
+            
+            
+        @*<vc:statistics state-caption="Statistics"></vc:statistics>*@
+
+    </div>
+    <div class="col-md-10 ">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Start of Event</th>
+                <th>Attendance</th>
+                <th>Actions</th>
+            </tr>
+            @Html.DisplayForModel()
+        </table>
+    </div>
+</div>
+
+<div class="row">
+   
+   
+    <div class="col-md-4">
+        <a  asp-action="Add">Add</a>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model Shared.ProposalModel
+
+<form asp-action="Add" method="post">
+    <input asp-for="ConferenceId" type="hidden"   />
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label asp-for="Title"></label>
+        </div>
+
+        <div class="col-md-2">
+
+            <input asp-for="Title" class="form-control"/>
+        </div>
+
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label asp-for="Speaker"></label>
+        </div>
+
+        <div class="col-md-2">
+
+            <input asp-for="Speaker" class="form-control"/>
+        </div>
+    </div>
+
+
+
+    <div class="row form-group">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
