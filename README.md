@@ -7,7 +7,7 @@ ViewComponents
 
 bundleconfig
 
-IHttpClientFactory  
+IHttpClientFactory and calling api controller from backend service
 
 mvc controller 
 
@@ -20,6 +20,10 @@ Dependency injection
 Attribute routing 
 
 Default mvc routing 
+
+new default serializer , System.Text.Json
+
+Extension method
 
 this will include project for plazor in the future , this comment will be removed once this is done 
 
