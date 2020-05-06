@@ -9,17 +9,18 @@ namespace AspNetCore3.Upgrade.ViewComponents
 {
     public class StatisticsViewComponent:ViewComponent
     {
-        private readonly IConferenceService _conferenceMemoryService;
+        private readonly IStatisticsApiService _statisticsApiService;
 
-        public StatisticsViewComponent(IConferenceService conferenceMemoryService)
+
+        public StatisticsViewComponent(IStatisticsApiService statisticsApiService)
         {
-            _conferenceMemoryService = conferenceMemoryService;
+            _statisticsApiService = statisticsApiService;
         }
         public async Task<IViewComponentResult> InvokeAsync(string stateCaption)
         {
             ViewBag.Caption = stateCaption;
 
-           return  View(await _conferenceMemoryService.GetStatistics());
+           return  View(await _statisticsApiService.GetStatistics());
 
         }
     }

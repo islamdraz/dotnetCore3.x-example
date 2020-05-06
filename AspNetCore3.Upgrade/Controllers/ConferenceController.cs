@@ -8,6 +8,7 @@ using Shared;
 
 namespace AspNetCore3.Upgrade.Controllers
 {
+
     public class ConferenceController : Controller
     {
         private readonly IConferenceService _conferenceService;

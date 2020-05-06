@@ -20,7 +20,8 @@ namespace AspNetCore3.Upgrade
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddSingleton<IConferenceService, ConferenceMemoryService>();
             services.AddSingleton<IProposalService, MemoryProposalService>();
-
+            services.AddSingleton<IStatisticsApiService, StatisticsApiService>();
+            services.AddHttpClient("baseHttpClient", config => { config.BaseAddress = new Uri("http://localhost:5000");  });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,11 +37,13 @@ namespace AspNetCore3.Upgrade
 
             app.UseEndpoints(endpoints =>
             {
-               
+                endpoints.MapControllers();
 
                 endpoints.MapControllerRoute("default",
                     "{controller=conference}/{action=index}/{id?}");
             });
+
+            
         }
     }
 }
